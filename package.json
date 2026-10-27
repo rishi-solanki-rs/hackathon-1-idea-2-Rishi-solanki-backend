@@ -1,0 +1,18 @@
+{
+  "name": "a-una-milla-db",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Supabase database project for A Una Milla: migrations, grants, RLS, seed and pgTAP tests.",
+  "scripts": {
+    "db:start": "supabase start -x gotrue,realtime,storage-api,imgproxy,kong,mailpit,postgrest,postgres-meta,studio,edge-runtime,logflare,vector,supavisor",
+    "db:reset": "supabase db reset",
+    "db:test": "supabase test db",
+    "db:lint": "supabase db lint --level warning",
+    "db:stop": "supabase stop --no-backup",
+    "check:secrets": "node scripts/check-secrets.mjs"
+  },
+  "devDependencies": {
+    "supabase": "2.122.0"
+  },
+  "packageManager": "pnpm@10.32.1"
+}

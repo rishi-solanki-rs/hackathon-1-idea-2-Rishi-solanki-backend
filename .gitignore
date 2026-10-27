@@ -1,0 +1,16 @@
+node_modules/
+.DS_Store
+
+# env files: every real env file stays ignored; only the template is tracked
+.env*
+!.env.example
+
+# Supabase local state
+supabase/.branches
+supabase/.temp
+supabase/.env
+
+# backups never live in the repo
+_backups/
+*.dump
+*.sql.gz
