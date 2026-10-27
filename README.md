@@ -10,6 +10,8 @@ The backend repository holds the **database** for A Una Milla. It contains migra
 supabase/migrations/20261027120000_catalogue.sql          airports, loyalty_programs, transfer_routes (public read-only)
 supabase/migrations/20261027120100_user_data.sql          profiles, loyalty_balances, trips, trip_legs, test_bookings, guest_migrations
 supabase/migrations/20261027120200_guest_migration_rpc.sql migrate_guest_data(): idempotent, security invoker
+supabase/migrations/20261027130000_planner_profiles_and_plans.sql  private planner document + immutable plan history
+supabase/migrations/20261027130100_card_catalogue.sql     card_products with evidence checks (public read-only)
 supabase/seed.sql            generated from frontend/src/fixtures/catalogue.ts (scripts/export-catalogue-sql.mjs)
 supabase/tests/database/     pgTAP: RLS everywhere, explicit grants, row isolation, composite FKs, idempotency
 ```
